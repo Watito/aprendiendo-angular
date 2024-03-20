@@ -20,8 +20,7 @@
 <p>Las zapatillas disponibles son:</p>
 <ul>
   <li *ngFor="let deportiva of zapatillas">
-    <span
-      [ngStyle]="{
+    <span [ngStyle]="{
         'text-decoration': !deportiva.stock ? 'line-through' : 'none'
       }"
     >
@@ -38,10 +37,8 @@
     <span
       *ngIf="deportiva.precio <= 100"
       [style.background]="deportiva.precio <= 100 ? 'green' : 'transparent'"
-      [style.color]="deportiva.precio <= 100 ? 'white' : 'black'"
-    >
-      ¡En oferta!</span
-    >
+      [style.color]="deportiva.precio <= 100 ? 'white' : 'black'">
+      ¡En oferta!</span>
   </li>
   <!-- Haciendo un For a el arreglo "Zapatillas" -->
 </ul>
