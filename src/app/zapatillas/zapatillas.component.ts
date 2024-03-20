@@ -23,7 +23,8 @@ export class ZapatillasComponent implements OnInit{
         new Zapatilla('Air Jordan', 190, 'Nike', 'Rojas', false),
         new Zapatilla('Total 90', 90, 'Adidas', 'Azules', true),
         new Zapatilla('Total 90', 100, 'Adidas', 'Rojas', false),
-        new Zapatilla('Total 90', 99, 'Adidas', 'Doradas', true)
+        new Zapatilla('Total 90', 99, 'Adidas', 'Doradas', true),
+        new Zapatilla('Air 2020', 75, 'New Balance', 'Celeste', true)
     ];
   }
 
@@ -53,5 +54,19 @@ export class ZapatillasComponent implements OnInit{
   addMarca(){
       this.marcas.push(this.mi_marca);
   }
+
+  borrarMarca(index:any){
+    // delete this.marcas[index];
+    this.marcas.splice(index, 1);
+  }
+
+  onBlur(){
+    console.log("Has salido del input")
+  }
+
+  mostrarPalabra(){
+    alert("this.mi_marca  "+" "+this.mi_marca)
+  }
+
 
 }
